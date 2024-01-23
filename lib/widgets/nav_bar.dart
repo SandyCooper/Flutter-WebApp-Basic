@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_app_basic/data/colors.dart';
+import 'package:flutter_web_app_basic/data/constraints.dart';
+import 'package:flutter_web_app_basic/data/styles.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class NavBar extends StatefulWidget {
@@ -19,7 +21,7 @@ class _NavBarState extends State<NavBar> {
         width: 110,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/logo.png"),
+            image: AssetImage(logo),
           ),
         ),
       );
@@ -72,18 +74,7 @@ class _NavBarState extends State<NavBar> {
               height: 50,
               child: ElevatedButton(
                 onPressed: () {},
-                style: ButtonStyle(
-                  elevation: MaterialStateProperty.all(0),
-                  backgroundColor: MaterialStateProperty.all(Colors.white),
-                  shape: MaterialStateProperty.all(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(
-                        color: AppColor.primary,
-                      ),
-                    ),
-                  ),
-                ),
+                style: buttonStyleForNavBar,
                 child: const Text(
                   "Request a Demo",
                   style: TextStyle(

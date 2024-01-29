@@ -25,59 +25,17 @@ class _Container3State extends State<Container3> {
           false);
     }
 
-    // Widget mobileContainer3(BuildContext context) {
-    //   return Container(
-    //     // padding: const EdgeInsets.only(top: 40),
-    //     width: double.infinity,
-    //     decoration: BoxDecoration(color: AppColor.primary),
-    //     child: Column(
-    //       children: [
-    //         Container(
-    //           padding: const EdgeInsets.only(
-    //             left: 20,
-    //             right: 20,
-    //             top: 20,
-    //             bottom: 0,
-    //           ),
-    //           child: Container(
-    //             height: 195,
-    //             width: double.infinity,
-    //             decoration: const BoxDecoration(
-    //               image: DecorationImage(
-    //                 image: AssetImage(dashboard),
-    //                 fit: BoxFit.contain,
-    //               ),
-    //             ),
-    //           ),
-    //         ),
-    //         Container(
-    //           color: Colors.white,
-    //           child: Row(
-    //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    //               children: [fb, google, cocacola, samsung]
-    //                   .map(
-    //                     (e) => Container(
-    //                       height: 20,
-    //                       width: 100,
-    //                       margin: const EdgeInsets.symmetric(
-    //                         vertical: 10,
-    //                       ),
-    //                       decoration: BoxDecoration(
-    //                         image: DecorationImage(
-    //                           image: AssetImage(e),
-    //                         ),
-    //                       ),
-    //                     ),
-    //                   )
-    //                   .toList()),
-    //         ),
-    //       ],
-    //     ),
-    //   );
-    // }
+    Widget mobileContainer3(BuildContext context) {
+      return commanContainerMobile(
+        "Alwalys online",
+        "Real-time \nsupport \nwith cloud",
+        "Tellus lacus morbi sagittis lacus in. Amet nisl at mauris enim accumsan nisi, tincidunt vel. Enim ipsum, amet quis ullamcorper eget ut.",
+        illustration1,
+      );
+    }
 
     return ScreenTypeLayout.builder(
-      // mobile: mobileContainer3,
+      mobile: mobileContainer3,
       desktop: desktopContainer3,
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_app_basic/data/colors.dart';
-import 'package:flutter_web_app_basic/screens/home.dart';
+import 'package:flutter_web_app_basic/routes/app_router_config.dart';
+// import 'package:flutter_web_app_basic/screens/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Flutter-Web-App_Basic',
       theme: ThemeData(
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         primaryColor: AppColor.primary,
       ),
-      home: const HomeScreen(),
+      routeInformationParser: MyRouter().router.routeInformationParser,
+      routerDelegate: MyRouter().router.routerDelegate,
     );
   }
 }

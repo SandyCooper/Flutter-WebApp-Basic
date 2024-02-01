@@ -23,7 +23,6 @@ class _HomeScreenState extends State<HomeScreen> {
     h = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Flutter Web Demo"),),
       body: SingleChildScrollView(
         child: Container(
           child: const Column(
@@ -31,8 +30,8 @@ class _HomeScreenState extends State<HomeScreen> {
               NavBar(),
               Container1(),
               Container2(),
-              Container3(),
-              Container4(),
+              // Container3(),
+              // Container4(),
               Container5(),
             ],
           ),

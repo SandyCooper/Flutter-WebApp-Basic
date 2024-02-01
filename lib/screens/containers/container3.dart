@@ -5,7 +5,14 @@ import 'package:flutter_web_app_basic/widgets/comman_container.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class Container3 extends StatefulWidget {
-  const Container3({super.key});
+  const Container3({
+    super.key,
+    required this.someText,
+    required this.anotherText,
+  });
+
+  final String someText;
+  final String anotherText;
 
   @override
   State<Container3> createState() {
@@ -18,8 +25,8 @@ class _Container3State extends State<Container3> {
   Widget build(context) {
     Widget desktopContainer3(BuildContext context) {
       return commamContainer(
-          "Alwalys online",
-          "Real-time \nsupport \nwith cloud",
+          widget.anotherText,
+          widget.someText,
           "Tellus lacus morbi sagittis lacus in. Amet nisl at \nmauris enim accumsan nisi, tincidunt vel. Enim \nipsum, amet quis ullamcorper eget ut.",
           illustration1,
           false);

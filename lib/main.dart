@@ -21,8 +21,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         primaryColor: AppColor.primary,
       ),
-      routeInformationParser: MyRouter().router.routeInformationParser,
-      routerDelegate: MyRouter().router.routerDelegate,
+      routerConfig: MyRouter().router,
     );
   }
 }

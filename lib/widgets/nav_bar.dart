@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_web_app_basic/data/colors.dart';
 import 'package:flutter_web_app_basic/data/constraints.dart';
 import 'package:flutter_web_app_basic/data/styles.dart';
+import 'package:flutter_web_app_basic/routes/app_router_constants.dart';
+import 'package:go_router/go_router.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class NavBar extends StatefulWidget {
@@ -73,7 +75,12 @@ class _NavBarState extends State<NavBar> {
             Container(
               height: 50,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  return context.goNamed(
+                    RouterConstants.container3Route,
+                    pathParameters: {"someText": "Sandeep Kumar", "anotherText" : "Pradeep Kumar"},
+                  );
+                },
                 style: buttonStyleForNavBar,
                 child: const Text(
                   "Request a Demo",
